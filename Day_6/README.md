@@ -4,11 +4,14 @@ including all the necessary steps:
 Step 1: **Set up Your Project**
 
 Create a new Spring Boot project using your preferred development environment (e.g., Spring Initializr or your IDE).
+![image](https://github.com/Pankaj-Str/Spring-Tutorial/assets/36913690/49c5ae9a-9125-49f9-8af4-9d2006fe05af)
+
+
 
 ![Screenshot 2023-09-04 100736](https://github.com/Pankaj-Str/Spring-Tutorial/assets/36913690/06f73722-59ef-4e5e-a880-b2f517875ad9)
 
 
-Step 2: Create database :
+Step 2: Create database using my sql https://dev.mysql.com/downloads/installer/:
 
 ```sql
 use cwp;
