@@ -1,36 +1,93 @@
-# how to insert data into a MySQL table using Spring Data JPA.
+# How to insert data into a MySQL table using Spring Data JPA.
 including all the necessary steps:
 
 Step 1: **Set up Your Project**
 
 Create a new Spring Boot project using your preferred development environment (e.g., Spring Initializr or your IDE).
 
+![Screenshot 2023-09-04 100736](https://github.com/Pankaj-Str/Spring-Tutorial/assets/36913690/06f73722-59ef-4e5e-a880-b2f517875ad9)
+
+
 Step 2: **Configure Your Database**
 
 In the `src/main/resources/application.properties` file, configure your MySQL database connection properties:
 
+![image](https://github.com/Pankaj-Str/Spring-Tutorial/assets/36913690/c6284969-cbb9-4dba-9c3a-8c2f05198e8b)
+
+```yaml
+SpringJDBCMysql\src\main\resources\application.properties
+```
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
-spring.datasource.username=your_username
-spring.datasource.password=your_password
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/cwp
+spring.datasource.username=root
+spring.datasource.password=admin
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+
 ```
 
 Step 3: **Create an Entity Class**
 
-Create an entity class representing the data you want to insert into the database. For example, let's say you have a "User" entity:
+Create an entity class representing the data you want to insert into the database. For example, let's say you have a "Employee" entity:
+
+```yaml
+path = SpringJDBCMysql\src\main\java\in\p4n\Employee.java
+```
 
 ```java
-@Entity
-@Table(name = "user")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String username;
-    private String email;
+package in.p4n;
 
-    // getters and setters
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Employee {
+
+   @Id
+   private Integer empId;
+   private String empName;
+   private Double empSal;
+   private String empDept;
+
+   public Employee() {
+
+   }
+
+   public Employee(Integer empId, String empName, Double empSal, String empDept) {
+      super();
+      this.empId = empId;
+      this.empName = empName;
+      this.empSal = empSal;
+      this.empDept = empDept;
+   }
+
+   public Integer getEmpId() {
+      return empId;
+   }
+   public void setEmpId(Integer empId) {
+      this.empId = empId;
+   }
+   public String getEmpName() {
+      return empName;
+   }
+   public void setEmpName(String empName) {
+      this.empName = empName;
+   }
+   public Double getEmpSal() {
+      return empSal;
+   }
+   public void setEmpSal(Double empSal) {
+      this.empSal = empSal;
+   }
+   public String getEmpDept() {
+      return empDept;
+   }
+   public void setEmpDept(String empDept) {
+      this.empDept = empDept;
+   }
+
 }
 ```
 
