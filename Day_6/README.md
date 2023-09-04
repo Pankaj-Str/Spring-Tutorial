@@ -1,9 +1,13 @@
 # How to insert data into a MySQL table using Spring Data JPA.
+
+## [View blog](https://medium.com/@codeswithpankaj/how-to-insert-data-into-a-mysql-table-using-spring-data-jpa-2df1a147fa9f)
+
 including all the necessary steps:
 
 Step 1: **Set up Your Project**
 
 Create a new Spring Boot project using your preferred development environment (e.g., Spring Initializr or your IDE).
+
 ![image](https://github.com/Pankaj-Str/Spring-Tutorial/assets/36913690/49c5ae9a-9125-49f9-8af4-9d2006fe05af)
 
 
@@ -11,7 +15,7 @@ Create a new Spring Boot project using your preferred development environment (e
 ![Screenshot 2023-09-04 100736](https://github.com/Pankaj-Str/Spring-Tutorial/assets/36913690/06f73722-59ef-4e5e-a880-b2f517875ad9)
 
 
-Step 2: Create database using my sql https://dev.mysql.com/downloads/installer/:
+Step 2: Create database using [MySQL](https://dev.mysql.com/downloads/installer/)
 
 ```sql
 use cwp;
@@ -26,7 +30,7 @@ In the `SpringJDBCMysql\src\main\resources\application.properties` file, configu
 ![image](https://github.com/Pankaj-Str/Spring-Tutorial/assets/36913690/c6284969-cbb9-4dba-9c3a-8c2f05198e8b)
 
 ```yaml
-SpringJDBCMysql\src\main\resources\application.properties
+Path = SpringJDBCMysql\src\main\resources\application.properties
 ```
 ```properties
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
@@ -107,7 +111,7 @@ Step 5: **Create a Repository Interface name `EmployeeRepository.java`**
 Create a repository interface for your entity by extending `JpaRepository<Employee, Integer>`:
 
 ```yaml
-SpringJDBCMysql\src\main\java\in\p4n\EmployeeRepository.java
+Path = SpringJDBCMysql\src\main\java\in\p4n\EmployeeRepository.java
 ```
 
 ```java
@@ -128,7 +132,7 @@ Step 6: **Create a Insert Data in (Main Method) Class `DBOperationRunner.java`**
 Create a service class that uses the repository to insert data:
 
 ```yaml
-SpringJDBCMysql\src\main\java\in\p4n\DBOperationRunner.java
+Path = SpringJDBCMysql\src\main\java\in\p4n\DBOperationRunner.java
 ```
 
 ```java
@@ -176,7 +180,7 @@ Step 7: **Create a Main Application Class `SpringJdbcMysqlApplication.java`**
 Create a main application class with a `main` method to run your Spring Boot application:
 
 ```yaml
-SpringJDBCMysql\src\main\java\in\p4n\SpringJdbcMysqlApplication.java
+Path = SpringJDBCMysql\src\main\java\in\p4n\SpringJdbcMysqlApplication.java
 ```
 
 ```java
@@ -201,11 +205,8 @@ Step 8: **Run Your Application**
 
 Start your Spring Boot application.
 
-When you run your application, it will insert the user data into the "user" table in the MySQL database.
+When you run your application, it will insert the user data into the "employee" table in the MySQL database.
 
-Make sure you have the required dependencies in your `pom.xml` (if using Maven) or `build.gradle` (if using Gradle) to enable Spring Data JPA and Spring Boot.
-
-This complete example covers all the steps necessary to insert data into a MySQL table using Spring Data JPA.
 
 ### output like this
 
