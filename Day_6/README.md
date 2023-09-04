@@ -8,7 +8,15 @@ Create a new Spring Boot project using your preferred development environment (e
 ![Screenshot 2023-09-04 100736](https://github.com/Pankaj-Str/Spring-Tutorial/assets/36913690/06f73722-59ef-4e5e-a880-b2f517875ad9)
 
 
-Step 2: **Configure Your Database**
+Step 2: Create database :
+
+```sql
+use cwp;
+
+select * from employee;
+```
+
+Step 3: **Configure Your Database**
 
 In the `SpringJDBCMysql\src\main\resources\application.properties` file, configure your MySQL database connection properties:
 
@@ -28,7 +36,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 ```
 
-Step 3: **Create an Entity Class**
+Step 4: **Create an Entity Class**
 
 Create an entity class representing the data you want to insert into the database. For example, let's say you have a "Employee.java" entity:
 
@@ -91,9 +99,13 @@ public class Employee {
 }
 ```
 
-Step 4: **Create a Repository Interface name `EmployeeRepository.java`**
+Step 5: **Create a Repository Interface name `EmployeeRepository.java`**
 
 Create a repository interface for your entity by extending `JpaRepository<Employee, Integer>`:
+
+```yaml
+SpringJDBCMysql\src\main\java\in\p4n\EmployeeRepository.java
+```
 
 ```java
 package in.p4n;
@@ -108,60 +120,79 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 ```
 
-Step 5: **Create a Service Class**
+Step 6: **Create a Insert Data in (Main Method) Class `DBOperationRunner.java`**
 
 Create a service class that uses the repository to insert data:
 
-```java
-@Service
-public class UserService {
-    @Autowired
-    private UserRepository userRepository;
+```yaml
+SpringJDBCMysql\src\main\java\in\p4n\DBOperationRunner.java
+```
 
-    public User insertUser(User user) {
-        return userRepository.save(user);
-    }
+```java
+package in.p4n;
+
+import java.util.Arrays;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class DBOperationRunner implements CommandLineRunner {
+
+     @Autowired
+     EmployeeRepository eRepo;
+
+     @Override
+     public void run(String... args) throws Exception {
+
+           eRepo.saveAll(Arrays.asList(
+
+                      new Employee(1001,"James",2599.5,"HR"),
+                      new Employee(1002,"Elizabeth",2999.0,"Admin"),
+                      new Employee(1003,"Robert",2699.5,"Testing"),
+                      new Employee(1004,"Victoria",3000.5,"Development"),
+                      new Employee(1005,"David",2650.5,"QA"),
+                      new Employee(1006,"Isabel",2590.0,"Support"),
+                      new Employee(1007,"Michael",3599.75,"Development"),
+                      new Employee(1008,"Maria",2499.0,"Finance"),
+                      new Employee(1009,"Thomas",2799.25,"HR"),
+                      new Employee(1010,"Maria",2899.5,"Development"),
+        		   	  new Employee(1011,"Omji",28993.5,"IOS Development"))
+
+            ); 
+
+          System.out.println("----------All Data saved into Database----------------------");
+          }
+
 }
 ```
 
-Step 6: **Create a Main Application Class**
+Step 7: **Create a Main Application Class `SpringJdbcMysqlApplication.java`**
 
 Create a main application class with a `main` method to run your Spring Boot application:
 
-```java
-@SpringBootApplication
-public class YourApplicationName {
-
-    public static void main(String[] args) {
-        SpringApplication.run(YourApplicationName.class, args);
-    }
-}
+```yaml
+SpringJDBCMysql\src\main\java\in\p4n\SpringJdbcMysqlApplication.java
 ```
 
-Step 7: **Insert Data in Main Method**
-
-You can insert data into the MySQL table when your application starts. Modify the `main` method in your main application class as follows:
-
 ```java
+package in.p4n;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 @SpringBootApplication
-public class YourApplicationName {
+public class SpringJdbcMysqlApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(YourApplicationName.class, args);
+	public static void main(String[] args) {
+		SpringApplication.run(SpringJdbcMysqlApplication.class, args);
+	}
 
-        // Insert data
-        User user = new User();
-        user.setUsername("john_doe");
-        user.setEmail("john.doe@example.com");
-
-        ApplicationContext context = SpringApplication.run(YourApplicationName.class, args);
-        UserService userService = context.getBean(UserService.class);
-        User savedUser = userService.insertUser(user);
-
-        System.out.println("User saved with ID: " + savedUser.getId());
-    }
 }
+
 ```
+
 
 Step 8: **Run Your Application**
 
@@ -172,3 +203,8 @@ When you run your application, it will insert the user data into the "user" tabl
 Make sure you have the required dependencies in your `pom.xml` (if using Maven) or `build.gradle` (if using Gradle) to enable Spring Data JPA and Spring Boot.
 
 This complete example covers all the steps necessary to insert data into a MySQL table using Spring Data JPA.
+
+### output like this
+
+![image](https://github.com/Pankaj-Str/Spring-Tutorial/assets/36913690/1476be35-d030-4615-a986-7b589a00ab32)
+
