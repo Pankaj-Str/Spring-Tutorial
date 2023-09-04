@@ -10,7 +10,7 @@ Create a new Spring Boot project using your preferred development environment (e
 
 Step 2: **Configure Your Database**
 
-In the `src/main/resources/application.properties` file, configure your MySQL database connection properties:
+In the `SpringJDBCMysql\src\main\resources\application.properties` file, configure your MySQL database connection properties:
 
 ![image](https://github.com/Pankaj-Str/Spring-Tutorial/assets/36913690/c6284969-cbb9-4dba-9c3a-8c2f05198e8b)
 
@@ -30,7 +30,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 Step 3: **Create an Entity Class**
 
-Create an entity class representing the data you want to insert into the database. For example, let's say you have a "Employee" entity:
+Create an entity class representing the data you want to insert into the database. For example, let's say you have a "Employee.java" entity:
 
 ```yaml
 path = SpringJDBCMysql\src\main\java\in\p4n\Employee.java
@@ -91,13 +91,21 @@ public class Employee {
 }
 ```
 
-Step 4: **Create a Repository Interface**
+Step 4: **Create a Repository Interface name `EmployeeRepository.java`**
 
-Create a repository interface for your entity by extending `JpaRepository`:
+Create a repository interface for your entity by extending `JpaRepository<Employee, Integer>`:
 
 ```java
-public interface UserRepository extends JpaRepository<User, Long> {
+package in.p4n;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+
 }
+
 ```
 
 Step 5: **Create a Service Class**
