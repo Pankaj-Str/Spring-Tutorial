@@ -4,7 +4,7 @@ Aspect-Oriented Programming (AOP) is a programming paradigm that allows you to m
 
 Here's an example of how to use AOP in Spring to implement logging using AspectJ annotations:
 
-```yaml
+```xml
 <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjtools -->
 		<dependency>
 		    <groupId>org.aspectj</groupId>
