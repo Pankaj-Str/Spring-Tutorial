@@ -420,11 +420,7 @@ Spring calls `cleanup()` when the application context is closed normally.
 
 Spring officially supports these XML lifecycle attributes and the `InitializingBean` and `DisposableBean` interfaces.&#x20;
 
-[image](https://www.google.com/s2/favicons?domain=https://docs.spring.io\&sz=32)
 
-Home
-
-+1
 
 
 
