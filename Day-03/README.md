@@ -536,11 +536,6 @@ When `context.close()` is called, Spring invokes `destroy()` and then `cleanup()
 
 This is the lifecycle order demonstrated by our example. The actual Spring lifecycle includes additional callbacks when you use other interfaces or annotations.&#x20;
 
-[image](https://www.google.com/s2/favicons?domain=https://docs.spring.io\&sz=32)
-
-Home
-
-+1
 
 
 
@@ -561,11 +556,6 @@ Home
 
 The annotation-based callbacks, `@PostConstruct` and `@PreDestroy`, are also common in modern Spring applications. They are alternatives to, or can be combined with, the other lifecycle mechanisms.&#x20;
 
-[image](https://www.google.com/s2/favicons?domain=https://docs.spring.io\&sz=32)
-
-Home
-
-+1
 
 
 
@@ -594,11 +584,6 @@ context.registerShutdownHook();
 
 Call this after creating the context if you want the JVM to request a graceful context shutdown when it exits. Do not rely on the shutdown hook for deterministic cleanup during normal program execution; explicitly closing the context is useful for this tutorial.&#x20;
 
-[image](https://www.google.com/s2/favicons?domain=https://docs.spring.io\&sz=32)
-
-Home
-
-+1
 
 
 
