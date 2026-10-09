@@ -12,23 +12,10 @@ But in Spring Framework, the Spring container can create and manage objects for 
 
 The Bean Life Cycle describes the different stages a bean goes through, from creation to destruction.
 
-1\. Bean Instantiation
 
-Spring creates the object.
+<img width="785" height="539" alt="Screenshot 2026-10-09 at 1 53 58 PM" src="https://github.com/user-attachments/assets/6b5f9232-6b7f-4857-8f9d-05ff7815a8dc" />
 
-2\. Dependency Injection
 
-Spring provides required dependencies and properties.
-
-3\. Initialization
-
-Spring completes bean setup and initialization callbacks run.
-
-4\. Ready for Use
-
-Your application uses the bean.
-
-5\. Destruction
 
 Spring runs destruction callbacks when the container shuts down or the bean is destroyed.
 
