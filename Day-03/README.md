@@ -1,9 +1,5 @@
 # Spring Bean Life Cycle
 
-In this tutorial, we will learn the Spring Bean Life Cycle from zero, step by step, with a complete Java project, full code, output, and simple explanations.
-
-By the end, you will understand how Spring creates an object (bean), initializes it, uses it, and destroys it.
-
 ## 1. What is the Spring Bean Life Cycle?
 
 In Java, we usually create objects using the `new` keyword.
