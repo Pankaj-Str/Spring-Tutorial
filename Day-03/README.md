@@ -506,33 +506,9 @@ The numbers in the output are labels from the example code; they are not Spring'
 
 Let's understand what happens internally when you run the program.
 
-Step 1: Instantiation
+<img width="701" height="643" alt="Screenshot 2026-10-09 at 1 52 10 PM" src="https://github.com/user-attachments/assets/25328ce8-2e2c-4353-a0b4-ec618eacf85c" />
 
-Spring calls the `Student()` constructor to create the object.
 
-Step 2: Populate properties
-
-Spring calls `setName("Pankaj")` and `setAge(25)`.
-
-Step 3: Aware callbacks
-
-Spring calls `setBeanName("student")` because the class implements `BeanNameAware`.
-
-Step 4: Before initialization
-
-`postProcessBeforeInitialization()` executes.
-
-Step 5: Initialization callbacks
-
-`afterPropertiesSet()` executes, followed by the custom `init()` method.
-
-Step 6: After initialization
-
-`postProcessAfterInitialization()` executes. The bean is ready for use after processing completes.
-
-Step 7: Destruction
-
-When `context.close()` is called, Spring invokes `destroy()` and then `cleanup()` for this singleton bean.
 
 This is the lifecycle order demonstrated by our example. The actual Spring lifecycle includes additional callbacks when you use other interfaces or annotations.&#x20;
 
