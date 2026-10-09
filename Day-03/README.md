@@ -291,11 +291,6 @@ Spring will call these methods during the application's orderly shutdown.
 
 Spring supports these lifecycle callbacks through its bean container.&#x20;
 
-[image](https://www.google.com/s2/favicons?domain=https://docs.spring.io\&sz=32)
-
-Home
-
-+1
 
 
 
