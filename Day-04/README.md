@@ -402,13 +402,9 @@ Marks the class as an aspect. It tells Spring that this class contains advice an
 @Component
 ```
 
-Registers the aspect as a Spring-managed bean. `@Aspect` alone does not make the class discoverable through component scanning.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://docs.spring.vmware.com\&sz=32)
+Registers the aspect as a Spring-managed bean. `@Aspect` alone does not make the class discoverable through component scanning.
 
 Spring Documentation
-
-
 
 3\. The pointcut expression
 
