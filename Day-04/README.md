@@ -67,7 +67,7 @@ We will create a project named `spring-aop-demo` using Java, Maven, and Spring B
 
 Open the official website:
 
-[Spring Initializr — Create Spring Boot Project](https://start.spring.io/?utm_source=chatgpt.com)
+[Spring Initializr — Create Spring Boot Project](https://start.spring.io)
 
 Select these settings:
 
@@ -181,14 +181,7 @@ If you want to use the following complete Maven configuration, replace your `pom
 </project>
 ```
 
-Important: Maven downloads the required AOP libraries through this dependency. You do not need to download AspectJ separately for this example. The Spring AOP starter provides the necessary dependencies.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://docs.spring.io\&sz=32)
-
-Home
-
-+1
-
+Important: Maven downloads the required AOP libraries through this dependency. You do not need to download AspectJ separately for this example. The Spring AOP starter provides the necessary dependencies.
 
 
 Wait until Maven finishes downloading dependencies before continuing.
@@ -446,13 +439,7 @@ Object result = joinPoint.proceed();
 
 This is essential in our `@Around` advice. It allows the original business method to execute. Without calling `proceed()`, the original method would not run.
 
-The `finally` block measures elapsed time even if the method throws an exception.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://docs.spring.io\&sz=32)
-
-Home
-
-+1
+The `finally` block measures elapsed time even if the method throws an exception
 
 
 
@@ -719,6 +706,6 @@ public Object around(ProceedingJoinPoint joinPoint)
 
 
 
-For further study, refer to the official Spring Framework AOP documentation: [Aspect-Oriented Programming with Spring](https://docs.spring.io/spring/reference/core/aop.html?utm_source=chatgpt.com).
+For further study, refer to the official Spring Framework AOP documentation: [Aspect-Oriented Programming with Spring](https://docs.spring.io/spring/reference/core/aop.html).
 
 Next recommended practice: Add a `PaymentService` class and use AOP to log every payment operation without changing the business logic. This will help you understand how AOP is useful in real-world applications.
