@@ -18,11 +18,11 @@ With AOP, you can write the logging code once and apply it to multiple methods a
 
 ## Without AOP vs. With AOP
 
-Without AOP
+#### Without AOP
 
 Logging code is repeated in every business method.
 
-With AOP
+#### With AOP
 
 Logging is written once in an aspect and applied to selected methods.
 
@@ -98,7 +98,7 @@ Open the extracted folder in IntelliJ IDEA, Eclipse, or VS Code with Java and Ma
 
 Your project should contain a structure similar to this:
 
-spring-aop-demo
+#### spring-aop-demo
 
 `src/main/java/com/example/aop`
 
@@ -388,7 +388,7 @@ public class LoggingAspect {
 
 ### Understand each part
 
-1\. `@Aspect`
+### 1\. `@Aspect`
 
 ```
 @Aspect
@@ -396,7 +396,7 @@ public class LoggingAspect {
 
 Marks the class as an aspect. It tells Spring that this class contains advice and pointcut declarations.
 
-2\. `@Component`
+### 2\. `@Component`
 
 ```
 @Component
@@ -406,7 +406,7 @@ Registers the aspect as a Spring-managed bean. `@Aspect` alone does not make the
 
 Spring Documentation
 
-3\. The pointcut expression
+### 3\. The pointcut expression
 
 ```
 execution(* com.example.aop.service.*.*(..))
@@ -427,7 +427,7 @@ Breakdown:
 
 The same pointcut is used for all five advice types in this demonstration. This means that calling any of our three service methods triggers the matching advice.
 
-4\. `joinPoint.proceed()`
+### 4\. `joinPoint.proceed()`
 
 ```
 Object result = joinPoint.proceed();
@@ -536,11 +536,11 @@ spring-aop-demo
 
 ### Step 8: Execute the application
 
-Option A — IntelliJ IDEA or Eclipse
+- Option A — IntelliJ IDEA or Eclipse
 
 Open `SpringAopDemoApplication.java` and run its `main()` method.
 
-Option B — Terminal
+- Option B — Terminal
 
 Open a terminal in the root project folder and run:
 
