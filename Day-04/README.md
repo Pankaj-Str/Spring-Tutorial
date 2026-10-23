@@ -85,9 +85,10 @@ Select these settings:
 
 Click Generate, download the ZIP file, and extract it.
 
-[Spring Initializr Reference Guide](https://images.openai.com/static-rsc-4/I7P7daQymbePQ4RCNUnl2Ix2hFVaQJW7JMbKZ5xNQSuygF40ScU0LR2QnwQvSkLBnM295Eq16G6_DyISRyYDnVUn4sMArRXndO6hZDsOEmrw7NLGypdqVpuYH_tfxN-2BCJ1gJd__2YHjeHmO2arJTq03mf_1bMAvYXnBPefbG0?purpose=inline)
+<img width="2878" height="2082" alt="web-selected" src="https://github.com/user-attachments/assets/30abe841-74f4-482c-8cf2-7dd5953d0374" />
 
-[docs.spring.io](https://docs.spring.io/initializr/docs/0.9.2/reference/html/?utm_source=chatgpt.com)
+
+[docs.spring.io](https://docs.spring.io/initializr/docs/0.9.2/reference/html)
 
 If Spring Initializr no longer offers the selected version, choose a compatible stable Spring Boot release available there. The code below uses Java 17 and Spring Boot 3.x conventions.
 
