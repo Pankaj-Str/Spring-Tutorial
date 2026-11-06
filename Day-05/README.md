@@ -104,11 +104,11 @@ Before developing the application, install the following software.
 
 Download links:
 
-- [Java JDK](https://www.oracle.com/java/technologies/downloads/?utm_source=chatgpt.com)
-- [Eclipse IDE](https://www.eclipse.org/downloads/?utm_source=chatgpt.com)
-- [MySQL Server](https://dev.mysql.com/downloads/mysql/?utm_source=chatgpt.com)
-- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/?utm_source=chatgpt.com)
-- [Apache Maven](https://maven.apache.org/download.cgi?utm_source=chatgpt.com)
+- [Java JDK](https://www.oracle.com/java/technologies/downloads/?utm_source)
+- [Eclipse IDE](https://www.eclipse.org/downloads/?utm_source)
+- [MySQL Server](https://dev.mysql.com/downloads/mysql/?utm_source)
+- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/?utm_source)
+- [Apache Maven](https://maven.apache.org/download.cgi?utm_source)
 
 ## 5. Verify Java Installation
 
